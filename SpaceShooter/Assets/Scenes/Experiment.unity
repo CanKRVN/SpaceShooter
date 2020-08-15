@@ -824,15 +824,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hazards:
-  - {fileID: 3280598585903136034, guid: 91337cdb7f3e3a841a98a49a910cf45f, type: 3}
-  - {fileID: 959529292285835507, guid: 85e323f0b73af8846bb6c51c8028c99f, type: 3}
-  - {fileID: 7025551529262719615, guid: 9bcc0832ca879394cb3072a9018624f1, type: 3}
+  - {fileID: 6909160472675473206, guid: f1d42666c9fa5b1428e1f5f3fd07d7bb, type: 3}
+  - {fileID: 1031544202478089467, guid: 8408074b98a3d584b9921d65bc73c2eb, type: 3}
+  - {fileID: 777246469470571038, guid: f33f005bf07446543a6446914e7a49a2, type: 3}
   spawnValues: {x: 5, y: 5, z: 13}
   spawnWait: 0.8
   waveWait: 3
   hazardCount: 1
   spawnCounter: 0
-  startWait: 0
+  startWait: 1
   scoreText: {fileID: 359763835}
   gameOverPanel: {fileID: 1650396465}
 --- !u!1 &1306211945
