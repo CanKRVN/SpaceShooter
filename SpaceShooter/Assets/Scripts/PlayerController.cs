@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody rb;
     public float speed;
     public float tilt;
-    public Boundry boundry;
+    public Boundary boundary;
     public GameObject bolt;
     public Transform shotSpawn;
     public float firerate;
@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(horizontal, 0, vertical);
 
         rb.velocity = movement * speed;
-        rb.position = new Vector3(Mathf.Clamp(rb.position.x, boundry.minX, boundry.maxX), rb.position.y, Mathf.Clamp(rb.position.z, boundry.minZ, boundry.maxZ));
+        rb.position = new Vector3(Mathf.Clamp(rb.position.x, boundary.minX, boundary.maxX), rb.position.y, Mathf.Clamp(rb.position.z, boundary.minZ, boundary.maxZ));
         rb.rotation = Quaternion.Euler(0, 0, rb.velocity.x * -tilt);
     }
 
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
 }
 
 [System.Serializable]
-public class Boundry
+public class Boundary
 {
     public float minX, maxX, minZ, maxZ;
 }

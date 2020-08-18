@@ -5,21 +5,15 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    Rigidbody rb;
+    private Rigidbody rb;
     public float speed;
-    private void Start()
+    public void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.velocity = transform.forward * speed;
-
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("boundry"))
+        if (gameObject.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
+            Debug.Log(rb.velocity.z);
         }
     }
-
 }

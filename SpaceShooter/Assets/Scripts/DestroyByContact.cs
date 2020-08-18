@@ -28,15 +28,20 @@ public class DestroyByContact : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.CompareTag("boundry"))
+        if (other.gameObject.CompareTag("boundry") || other.gameObject.CompareTag("Enemy"))
         {
             return;
         }
-        Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        if(explosionEffect != null)
+        {
+            Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        }
+        
         gameController.AddScore(scoreValue);
 
         if (other.CompareTag("Player"))
         {
+            Debug.Log("gemi vuruldu");
             Instantiate(playerExplosionEffect, other.transform.position, Quaternion.identity);
             gameController.GameOver();
             
